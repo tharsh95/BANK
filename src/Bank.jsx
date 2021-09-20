@@ -9,14 +9,12 @@ const Bank = () => {
         setAmount(e.target.value)
     }
     function handleDeposit() {
-        setFlag(false)
         setBalance(balance => parseFloat(balance) + parseFloat(amount))
     }
     useEffect(() => {
         localStorage.setItem("balance", balance)
     }, [balance, amount])
     function handleWithdraw() {
-        setFlag(false)
         if (balance - amount > 0)
             setBalance(balance => parseFloat(balance) - parseFloat(amount))
     }
@@ -24,6 +22,9 @@ const Bank = () => {
         const remaining = localStorage.getItem("balance")
         setState(remaining)
         setFlag(true)
+        setTimeout(() => {
+            setFlag(false)
+        }, 5000);
     }
     return (
         <div>
