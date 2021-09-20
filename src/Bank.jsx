@@ -15,7 +15,7 @@ const Bank = () => {
         localStorage.setItem("balance", balance)
     }, [balance, amount])
     function handleWithdraw() {
-        if (balance - amount > 0)
+        if (balance - amount >= 0)
             setBalance(balance => parseFloat(balance) - parseFloat(amount))
     }
     function handleBalance(){
