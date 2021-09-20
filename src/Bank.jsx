@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 
 const Bank = () => {
-    const [amount, setAmount] = useState(0)
+    const [amount, setAmount] = useState("")
     const [flag, setFlag] = useState(false)
     const [balance, setBalance] = useState(localStorage.getItem("balance"))
     const [state, setState] = useState(0)
@@ -36,6 +36,7 @@ const Bank = () => {
                     placeholder="Enter amount to deposit or withdraw"
                     value={amount}
                     onChange={handleChange}
+                    placeholder="Enter Amount"
                 />
             </div>
             <div className="container ">
