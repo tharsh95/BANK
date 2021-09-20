@@ -36,7 +36,6 @@ const Bank = () => {
                     placeholder="Enter amount to deposit or withdraw"
                     value={amount}
                     onChange={handleChange}
-                    placeholder="Enter Amount"
                 />
             </div>
             <div className="container ">
