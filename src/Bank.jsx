@@ -3,7 +3,7 @@ import React, { useEffect, useState } from 'react'
 const Bank = () => {
     const [amount, setAmount] = useState(0)
     const [flag, setFlag] = useState(false)
-    const [balance, setBalance] = useState(0)
+    const [balance, setBalance] = useState(localStorage.getItem("balance"))
     const [state, setState] = useState(0)
     function handleChange(e) {
         setAmount(e.target.value)
